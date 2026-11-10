@@ -1,0 +1,22 @@
+# Local state and generated files
+.DS_Store
+.idea/
+.vscode/
+.venv/
+__pycache__/
+*.py[cod]
+node_modules/
+dist/
+build/
+/output/
+/tmp/
+
+# Credentials and logs
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.log
