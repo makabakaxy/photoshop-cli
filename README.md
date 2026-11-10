@@ -23,6 +23,16 @@ uv tool install ucli-tools
 ucli install ps --preset-dir ./presets
 ```
 
+## Why CLI instead of direct MCP?
+
+This project still uses MCP under the hood. The difference is how you and your agent access Photoshop:
+
+- **Discover only what you need.** Use the skill and `--help` instead of registering all 128 tools directly in your agent client. This can reduce context use in clients that load the full tool catalog up front.
+- **Repeat workflows in scripts.** Save commands, loop over files, and combine Photoshop steps with other command-line tools. For example, replace a mockup image and export it for every product in a folder.
+- **Use the same commands yourself and with an agent.** Inspect, rerun, or adjust the commands from your terminal without an MCP client.
+
+Direct MCP is a good choice when you want native tool discovery and rich results, such as image previews, inside your agent client. The CLI requires shell access and command mappings that match the backend. It adds a different workflow, not extra Photoshop capabilities.
+
 ## Quick start
 
 Open Photoshop, then create a canvas, add a title, and save both an editable PSD and a PNG:
@@ -152,10 +162,6 @@ The installed `ps` skill teaches your agent the command groups and workflows. Yo
 - “Export this design in Instagram post and story sizes.”
 
 The agent needs shell access to run `ucli ps`. Photoshop must be running on the same Mac as the backend.
-
-## Why CLI?
-
-CLI commands are easy to repeat, save in scripts, and combine with other tools. An agent can discover commands through the skill and `--help`. Direct MCP offers native tool discovery and richer result rendering in clients that support it. Both use the same Photoshop backend; this project adds a terminal interface and a reusable skill.
 
 ## Manage the integration
 
