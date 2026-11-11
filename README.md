@@ -2,11 +2,13 @@
 
 Control Adobe Photoshop from your terminal or AI agent with `ucli ps`.
 
+**Currently supports macOS only. Windows and Linux are not supported by this CLI.**
+
 Built on [ucli](https://github.com/makabakaxy/ucli), this project provides CLI mappings and an agent skill for **128 Photoshop tools**. Create documents, edit layers and text, retouch images, run batch workflows, and export assets. It uses [photoshop-mcp](https://github.com/alisaitteke/photoshop-mcp) to control your installed Photoshop app.
 
 ## Install
 
-Requires macOS, Python 3.11+, [uv](https://docs.astral.sh/uv/), Node.js 22, 24, or 26 with npm, and Adobe Photoshop.
+Requires **macOS**, Python 3.11+, [uv](https://docs.astral.sh/uv/), Node.js 22, 24, or 26 with npm, and Adobe Photoshop.
 
 ```bash
 uv tool install ucli-tools && ucli install ps
